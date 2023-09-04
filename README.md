@@ -1,4 +1,4 @@
-# Testable Systems Starter
+# Decoupling in Practice demo
 
 Based on [Testable Systems Starter](https://github.com/mikaelvesavuori/testable-systems-starter), a sample project to use in testing workshops with the theme of testing and building "more testable" distributed (serverless) systems.
 
