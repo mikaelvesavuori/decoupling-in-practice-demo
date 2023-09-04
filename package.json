@@ -1,15 +1,12 @@
 {
   "name": "decoupling-in-practice-demo",
   "version": "1.0.0",
-  "description": "TODO",
+  "description": "Demo of how to decouple a service in practice.",
   "author": "Mikael Vesavuori",
   "license": "MIT",
   "keywords": [
     "serverless",
-    "template",
-    "boilerplate",
-    "starter",
-    "testing",
+    "demo",
     "learning",
     "workshop"
   ],
