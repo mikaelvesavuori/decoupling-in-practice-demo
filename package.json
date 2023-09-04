@@ -1,0 +1,46 @@
+{
+  "name": "decoupling-in-practice-demo",
+  "version": "1.0.0",
+  "description": "TODO",
+  "author": "Mikael Vesavuori",
+  "license": "MIT",
+  "keywords": [
+    "serverless",
+    "template",
+    "boilerplate",
+    "starter",
+    "testing",
+    "learning",
+    "workshop"
+  ],
+  "scripts": {
+    "start": "npx sls offline --reloadHandler",
+    "test": "npx jest tests --coverage",
+    "test:watch": "npx jest --clearCache && npx jest --watch",
+    "build": "npx sls package",
+    "deploy": "npx sls deploy",
+    "teardown": "npx sls remove"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8",
+    "@types/jest": "29",
+    "@types/node": "latest",
+    "@typescript-eslint/eslint-plugin": "6",
+    "@typescript-eslint/parser": "6",
+    "cross-fetch": "4",
+    "eslint": "8",
+    "eslint-config-prettier": "9",
+    "eslint-plugin-prettier": "5",
+    "jest": "29",
+    "msw": "1",
+    "prettier": "3",
+    "serverless": "3",
+    "serverless-esbuild": "1",
+    "serverless-iam-roles-per-function": "3",
+    "serverless-offline": "12",
+    "serverless-plugin-aws-alerts": "1",
+    "ts-jest": "29",
+    "ts-node": "10",
+    "typescript": "5"
+  }
+}
