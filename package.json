@@ -18,6 +18,9 @@
     "deploy": "npx sls deploy",
     "teardown": "npx sls remove"
   },
+  "dependencies": {
+    "mikrolog": "2"
+  },
   "devDependencies": {
     "@types/aws-lambda": "8",
     "@types/jest": "29",

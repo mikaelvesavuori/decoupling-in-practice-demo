@@ -31,35 +31,42 @@ package:
   individually: true
 
 custom:
-  # Actually doesn't seem to work at all?
   alerts:
     dashboards: false
     definitions:
       integrationErrors:
         metric: integrationErrors
         threshold: 0
-        statistic: Minimum
+        statistic: Maximum
         period: 60
         evaluationPeriods: 1
         comparisonOperator: GreaterThanThreshold
-        pattern: '{$.message = "*Error while integrating*"}'
+        pattern: '{$.error IS TRUE && $.message = "Error while integrating*"}'
         treatMissingData: notBreaching
 
 functions:
-  GreeterStart:
+  Start:
     handler: src/start.handler
-    description: Greeting start
+    description: Start version of greet functionality
     events:
       - httpApi:
           method: GET
-          path: /greetStart
+          path: /start
 
-  Greeter:
-    handler: src/handler.handler
-    description: Greeting
+  Greet:
+    handler: src/greet.handler
+    description: Greet Star Wars character
     events:
       - httpApi:
           method: GET
           path: /greet
     alarms:
       - integrationErrors
+
+  Schema:
+    handler: src/schema.handler
+    description: Greeting
+    events:
+      - httpApi:
+          method: GET
+          path: /schema

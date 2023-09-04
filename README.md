@@ -44,12 +44,20 @@ Clone, fork, or download the repo as you normally would. Run `npm install`.
 
 Using `npm start` you can start using the local endpoint `http://localhost:3000/greet` to call the service.
 
+### Starting version
+
 ```bash
-curl http://localhost:3000/greetStart?id=1
+curl http://localhost:3000/start?id=1
 ```
 
-or
+### Greet
 
 ```bash
-curl http://localhost:3000/greet?id=1
+curl http://localhost:3000/greet?id=1 -H 'X-Client-Version: 2'
+```
+
+### Schema
+
+```bash
+curl http://localhost:3000/schema?version=2.0.0
 ```
